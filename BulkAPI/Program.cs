@@ -13,7 +13,7 @@ namespace BulkAPI
     {
         static async Task Main(string[] args)
         {
-            String connectionString = "AccountEndpoint=https://wmt-graph.documents.azure.com:443/;AccountKey=4j0dgD7zpsigEl1gGjmpaJMrZ4EGA9VwBe1zHEvIww4XTxo970e31euj90xSQ3kZyKmCAQbpWlqXtMRPMbkcXA==;";
+            String connectionString = "AccountEndpoint=https://<YourAccountName>.documents.azure.com:443/;AccountKey=<YourAccountKey>;";
             CosmosClientOptions options = new CosmosClientOptions() { AllowBulkExecution = true , ConnectionMode=ConnectionMode.Direct, ConsistencyLevel=ConsistencyLevel.Eventual};
             CosmosClient cosmosClient = new CosmosClient(connectionString, options);
             Container container = cosmosClient.GetContainer("RetailDemo", "WebsiteData1");
